@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Getemployees</h2>
+<table class="table-condensed">
+    <tr>
+        <th>Empid</th>
+        <th>Empname></th>
+        <th>Empsal</th>
+    </tr>
+    @foreach (var item in ViewBag.info)
+    {
+        if (item.empid == ViewBag.id)
+        {
+            <tr>
+                <td>@item.empid</td>
+                <td>@item.empname</td>
+                <td>@item.empsal</td>
+            </tr>
+
+        }
+    }
+
+
+</table>
+
